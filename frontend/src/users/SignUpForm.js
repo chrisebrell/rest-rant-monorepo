@@ -12,19 +12,19 @@ function SignUpForm() {
 		password: ''
 	})
 
-	async function handleSubmit(e) {
-		e.preventDefault()
+async function handleSubmit(e) {
+	e.preventDefault()
 
-		await fetch(`http://localhost:5000/users/`, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(user)
-		})
+	await fetch(`http://localhost:3000/users/`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(user)
+	})
 
-		history.push(`/`)
-	}
+	history.push(`/`)
+}
 
 	return (
 		<main>
